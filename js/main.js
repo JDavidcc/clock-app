@@ -35,10 +35,10 @@ function updateTitle(hour) {
 }
 
 function getTitleFromHour(hour) {
-  if (hour > 5 && hour <= 12) {
+  if (hour >= 5 && hour < 12) {
     return "Buenos días!";
   }
-  if (hour >= 13 && hour < 20) {
+  if (hour >= 12 && hour < 20) {
     return "Buenas tardes!";
   }
   return "Buenas noches!";
