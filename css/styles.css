@@ -15,6 +15,12 @@ main {
     padding: 20px;
 }
 
+#title{
+    
+    color: white;
+    font-size: 100px;
+}
+
 .hour {
     font-size: 164px;
     color: white;

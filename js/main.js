@@ -1,4 +1,4 @@
-const LOCATION_URL = "http://ip-api.com/json/24.48.0.1";
+const LOCATION_URL = "http://ip-api.com/json/";
 
 const formatter = new Intl.DateTimeFormat(navigator.language, {
   hour: "numeric",
@@ -32,15 +32,13 @@ function updateTitle(hour) {
   const titleToUpdate = getTitleFromHour(hour);
   const titleElement = document.querySelector("#title");
   titleElement.textContent = titleToUpdate;
-  console.log(titleToUpdate);
 }
 
 function getTitleFromHour(hour) {
-  console.log(hour);
   if (hour > 5 && hour <= 12) {
     return "Buenos días!";
   }
-  if (hour >= 13 && hour <= 20) {
+  if (hour >= 13 && hour < 20) {
     return "Buenas tardes!";
   }
   return "Buenas noches!";
